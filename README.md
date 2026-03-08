@@ -73,6 +73,20 @@ After `outputs/summary.txt` is generated, fill placeholders in the Word report:
 python src/fill_report_from_summary.py docs/COE216-HW3-REPORT.docx outputs/summary.txt
 ```
 
+## Results Preview
+
+### VAD and Voiced/Unvoiced Analysis
+
+![VAD analysis plot](assets/plots/analysis_plot.png)
+
+### Feature Comparison
+
+![Feature comparison](assets/plots/feature_comparison.png)
+
+### Illustrative Analysis
+
+![Illustrative analysis](assets/plots/illustrative_analysis.png)
+
 ## Notes
 
 - If you get an "access/permission" error while editing the DOCX, close Microsoft Word completely and remove any temporary lock file like `~$*.docx`.
