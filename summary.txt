@@ -1,0 +1,7 @@
+Sampling rate: 48000
+Original duration (s): 11.157
+Shortened duration (s): 8.770
+Removed duration (s): 2.387
+Compression ratio (%): 21.40
+Energy threshold: 0.030602
+ZCR threshold: 0.1200
