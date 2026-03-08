@@ -23,7 +23,7 @@ python vad_voiced_unvoiced.py your_recording.wav --alpha 3.0 --tz 0.12
 To fill the report table automatically from the generated `summary.txt`:
 
 ```bash
-python fill_report_from_summary.py sources/files/HW3_Complete_Report.docx summary.txt
+python fill_report_from_summary.py HW3_Complete_Report.docx summary.txt
 ```
 
 Generated outputs are written next to the input WAV file: `speech_only.wav`, `analysis_plot.png`, and `summary.txt`.
