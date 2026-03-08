@@ -40,6 +40,7 @@ def main():
     parser.add_argument("wav_path", help="Input wav path")
     parser.add_argument("--alpha", type=float, default=3.0, help="Noise threshold multiplier")
     parser.add_argument("--tz", type=float, default=0.12, help="ZCR threshold")
+    parser.add_argument("--out-dir", default="outputs", help="Directory for generated output files")
     args = parser.parse_args()
 
     wav_path = Path(args.wav_path)
@@ -69,7 +70,8 @@ def main():
     speech_frames = wframes[speech == 1]
     speech_only = overlap_add(speech_frames, hop) if len(speech_frames) else np.array([], dtype=float)
 
-    out_dir = wav_path.parent
+    out_dir = Path(args.out_dir)
+    out_dir.mkdir(parents=True, exist_ok=True)
     if len(speech_only):
         wavfile.write(out_dir / "speech_only.wav", fs, np.int16(np.clip(speech_only, -1, 1) * 32767))
 

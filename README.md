@@ -11,19 +11,24 @@ Run in the terminal:
 
 ```bash
 pip install numpy scipy matplotlib
-python vad_voiced_unvoiced.py your_recording.wav
+python src/vad_voiced_unvoiced.py assets/audio/your_recording.wav --out-dir outputs
 ```
 
 Optional parameters:
 
 ```bash
-python vad_voiced_unvoiced.py your_recording.wav --alpha 3.0 --tz 0.12
+python src/vad_voiced_unvoiced.py assets/audio/your_recording.wav --alpha 3.0 --tz 0.12 --out-dir outputs
 ```
 
 To fill the report table automatically from the generated `summary.txt`:
 
 ```bash
-python fill_report_from_summary.py HW3_Complete_Report.docx summary.txt
+python src/fill_report_from_summary.py docs/COE216-HW3-REPORT.docx outputs/summary.txt
 ```
 
-Generated outputs are written next to the input WAV file: `speech_only.wav`, `analysis_plot.png`, and `summary.txt`.
+Generated outputs are written to `outputs/`: `speech_only.wav`, `analysis_plot.png`, and `summary.txt`.
+
+Final report files are in `docs/`:
+
+- `docs/COE216-HW3-REPORT.docx`
+- `docs/COE216-HW3-REPORT.pdf`
